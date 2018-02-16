@@ -7,11 +7,13 @@
     "url": "git+https://github.com/fancybits/videojs-pip.git"
   },
   "scripts": {
-    "build": "mkdir -p dist/ && npm-run-all -p build:*",
+    "build": "mkdir -p dist/ && npm-run-all -p build:* copy",
     "build:js": "npm-run-all -p build:js:*",
     "build:js:src": "./node_modules/.bin/browserify videojs-pip.js -o dist/videojs.pip.js",
     "build:js:uglify": "uglifyjs dist/videojs.pip.js --comments --mangle --compress  -o dist/videojs.pip.min.js",
-    "build:css": "node-sass videojs-pip.scss dist/videojs.pip.css --output-style=compressed --linefeed=lf"
+    "build:css": "node-sass videojs-pip.scss dist/videojs.pip.css --output-style=compressed --linefeed=lf",
+    "copy:font": "cp -R fonts dist/fonts",
+    "copy": "npm-run-all -p copy:*"
   },
   "keywords": [
     "videojs",

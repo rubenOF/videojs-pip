@@ -11,15 +11,19 @@ $icon-font-path: 'fonts' !default;
   font-style: normal;
 }
 
-.vjs-pip-control .vjs-icon-placeholder {
-  font-family: 'videojs-pipButton';
-  float: right;
-  cursor: pointer;
-
+.vjs-pip-control {
   &.active {
     color: #66a8cc;
   }
-  &:before {
-    content: "\e911";
+  .vjs-icon-placeholder {
+    font-family: 'videojs-pipButton';
+    font-weight: 400;
+    font-style: normal;
+
+    cursor: pointer;
+
+    &:before {
+      content: "\e911";
+    }
   }
 }
