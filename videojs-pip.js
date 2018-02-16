@@ -49,4 +49,4 @@ const PipButton = function(options) {
   }
 }
 
-videojs.plugin('pipButton', PipButton)
+videojs.registerPlugin('pipButton', PipButton)

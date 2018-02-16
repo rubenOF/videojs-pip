@@ -80,7 +80,7 @@ var PipButton = function PipButton(options) {
   }
 };
 
-_videoJs2['default'].plugin('pipButton', PipButton);
+_videoJs2['default'].registerPlugin('pipButton', PipButton);
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}]},{},[1]);
